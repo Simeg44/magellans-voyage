@@ -1,6 +1,8 @@
 extends layout
 
 block content
-	h1 Seville
+	h1=name
 
-	p: a(href="/canary") Next
+	if next !== "End"
+		p: a(href=path) Next
+	p=JSON.stringify(object)

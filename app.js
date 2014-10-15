@@ -7,14 +7,15 @@ app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.get('/', indexController.index);
+// app.get("/", indexController.main);
+app.get("/:filename", indexController.index);
 
-app.get("/canary", indexController.canary);
+// app.get("/canary", indexController.canary);
 
-app.get("/cape", indexController.cape);
-app.get("/strait", indexController.strait);
-app.get("/guam", indexController.guam);
-app.get("/philippines", indexController.philippines);
+// app.get("/cape", indexController.cape);
+// app.get("/strait", indexController.strait);
+// app.get("/guam", indexController.guam);
+// app.get("/philippines", indexController.philippines);
 
 var server = app.listen(8884, function() {
 	console.log('Express server listening on port ' + server.address().port);
