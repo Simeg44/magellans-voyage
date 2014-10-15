@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.get("/:filename", indexController.index);
 
 // app.get("/canary", indexController.canary);
-
 // app.get("/cape", indexController.cape);
 // app.get("/strait", indexController.strait);
 // app.get("/guam", indexController.guam);
